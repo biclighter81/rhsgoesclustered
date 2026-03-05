@@ -2,12 +2,16 @@ apiVersion: argocd-image-updater.argoproj.io/v1alpha1
 kind: ImageUpdater
 metadata:
   name: sven-updater
-  namespace: sven  # CR is in same namespace as Applications
 spec:
-  # spec.namespace can be omitted or set to same value
+  namespace: {{ .Release.Name }}.{{ .Release.Namespace }}
   applicationRefs:
-    - namePattern: "sventyapp"
+    - namePattern:  {{ .Release.Name }}-deployment
       images:
-        - name: "sven.registry.qentis.de/applications/environment-app"
-          updateStrategy: latest
-          imageName: "sven.registry.qentis.de/applications/environment-app"
+        - alias: "sventy"
+          imageName: "sven.registry.qentis.de/applications/environment-app:1.0.x"
+          commonUpdateSettings:
+            updateStrategy: "semver"
+          manifestTargets:
+            helm:
+              name: "image.repository"
+              tag: "image.tag"
