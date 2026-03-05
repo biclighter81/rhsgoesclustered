@@ -1,0 +1,11 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: sven-updater
+  namespace: sven  # CR is in same namespace as Applications
+spec:
+  # spec.namespace can be omitted or set to same value
+  applicationRefs:
+    - namePattern: "sventyapp"
+      images:
+          imageName: "sven.registry.qentis.de/applications/environment-app"
