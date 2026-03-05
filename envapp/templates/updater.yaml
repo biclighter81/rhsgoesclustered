@@ -2,6 +2,7 @@ apiVersion: argocd-image-updater.argoproj.io/v1alpha1
 kind: ImageUpdater
 metadata:
   name: updater
+  namespace: {{ .Release.Namespace }}
 spec:
   applicationRefs:
     - namePattern: "envapp"
