@@ -5,6 +5,7 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: rimraf-cloudflare
 spec:
+  ingressClassName: {{ .Values.ingress.className }}
   rules:
     - host: {{ .Release.Name }}.{{ .Release.Namespace }}.qentis.de
       http:
