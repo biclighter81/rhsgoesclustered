@@ -1,8 +1,8 @@
 replicaCount: 1
 image:
-  repository: registry.michael.qentis.de/applications/environment-app
+  repository: sven.registry.qentis.de/applications/environment-app
   tag: prod-1.0.0
-externalURL: https://registry.michael.qentis.de
+externalURL: https://sven.registry.qentis.de
 ingress:
   host: sven.qentis.de
   className: traefik
