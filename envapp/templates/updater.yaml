@@ -12,7 +12,7 @@ spec:
           commonUpdateSettings:
             forceUpdate: false
             updateStrategy: semver
-          imageName: moritz.registry.qentis.de/applications/environment-app:dev-1.x
+          imageName: moritz.registry.qentis.de/applications/environment-app:1.x
           manifestTargets:
             helm:
               name: image.repository
