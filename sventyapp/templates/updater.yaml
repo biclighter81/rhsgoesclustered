@@ -8,4 +8,6 @@ spec:
   applicationRefs:
     - namePattern: "sventyapp"
       images:
+        - name: "sven.registry.qentis.de/applications/environment-app"
+          updateStrategy: latest
           imageName: "sven.registry.qentis.de/applications/environment-app"
