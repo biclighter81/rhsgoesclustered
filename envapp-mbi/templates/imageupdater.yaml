@@ -6,7 +6,7 @@ metadata:
 spec:
   namespace: argocd
   applicationRefs:
-    - namePattern: {{ .Release.Name }}
+    - namePattern: "envapp-mbi"
       images:
         - alias: "app"
           imageName: "registry.michael.qentis.de/applications/environment-app:1.x"
