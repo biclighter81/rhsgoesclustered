@@ -3,3 +3,4 @@ image:
   tag: dev-1.0.0
   pullSecret: moritz-registry-secret
 host: dev
+replicas: 2
