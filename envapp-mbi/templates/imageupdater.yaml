@@ -2,16 +2,16 @@ apiVersion: argocd-image-updater.argoproj.io/v1alpha1
 kind: ImageUpdater
 metadata:
   name: {{ .Release.Name }}
-  namespace: argocd
+  namespace: {{ .Release.Namespace }}
 spec:
-  commonUpdateSettings:
-    updateStrategy: "semver"
+  namespace: argocd
   applicationRefs:
-    - namePattern: "envapp-mbi"
+    - namePattern: {{ .Release.Name }}
       images:
         - alias: "app"
           imageName: "registry.michael.qentis.de/applications/environment-app:1.x"
-          pullSecret: "image-updater-harbor-michael"
+          commonUpdateSettings:
+            updateStrategy: "semver"
           manifestTargets:
             helm:
               name: "image.repository"
