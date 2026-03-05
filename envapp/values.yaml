@@ -1,0 +1,5 @@
+image:
+  repository: moritz.registry.qentis.de/applications/environment-app
+  tag: dev-1.0.0
+  pullSecret: moritz-registry-secret
+host: dev
