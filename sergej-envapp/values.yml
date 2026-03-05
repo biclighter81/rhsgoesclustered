@@ -1,0 +1,12 @@
+ingress:
+  host: sergej
+  domain: qentis.de
+
+image:
+  repository: sergej.registry.qentis.de/applications/environment-app
+  tag: "dev-1.0.0"
+
+replicaCount: 2
+
+imagePullSecrets:
+  name: sergej-registry-credentials

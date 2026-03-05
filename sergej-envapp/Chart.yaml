@@ -1,0 +1,4 @@
+name: environment-app
+version: 1.0.0
+description: A Helm chart for the environment web application
+type: application
