@@ -1,0 +1,8 @@
+image:
+  repository: registry.michael.qentis.de/applications/environment-app
+  tag: dev-1.0.0
+  imagePullSecret: harbor-registry
+
+port: 3000
+
+replicas: 1
