@@ -1,0 +1,17 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: updater
+spec:
+  applicationRefs:
+    - namePattern: "envapp"
+      images:
+        - alias: "app"
+          commonUpdateSettings:
+            forceUpdate: false
+            updateStrategy: semver
+          imageName: moritz.registry.qentis.de/applications/environment-app:dev-1.x
+          manifestTargets:
+            helm:
+              name: image.repository
+              tag: image.tag
