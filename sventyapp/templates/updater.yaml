@@ -8,7 +8,7 @@ spec:
     - namePattern:  sventyapp
       images:
         - alias: "sventy"
-          imageName: "sven.registry.qentis.de/applications/environment-app:1.0.x"
+          imageName: "sven.registry.qentis.de/applications/environment-app:prod-1.0.x"
           commonUpdateSettings:
             updateStrategy: "semver"
           manifestTargets:
