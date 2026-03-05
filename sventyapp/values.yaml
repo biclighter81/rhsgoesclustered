@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: sven.registry.qentis.de/applications/environment-app
-  tag: prod-1.0.0
+  tag: 1.0.0
 externalURL: https://sven.registry.qentis.de
 ingress:
   host: sven.qentis.de
