@@ -3,7 +3,7 @@ kind: ImageUpdater
 metadata:
   name: sven-updater
 spec:
-  namespace: {{ .Release.Name }}.{{ .Release.Namespace }}
+  namespace: argocd
   applicationRefs:
     - namePattern:  {{ .Release.Name }}-deployment
       images:
