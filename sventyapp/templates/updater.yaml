@@ -5,7 +5,7 @@ metadata:
 spec:
   namespace: argocd
   applicationRefs:
-    - namePattern:  {{ .Release.Name }}-deployment
+    - namePattern:  sventyapp
       images:
         - alias: "sventy"
           imageName: "sven.registry.qentis.de/applications/environment-app:1.0.x"
