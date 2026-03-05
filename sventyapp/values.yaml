@@ -1,0 +1,10 @@
+replicaCount: 1
+image:
+  repository: registry.michael.qentis.de/applications/environment-app
+  tag: prod-1.0.0
+externalURL: https://registry.michael.qentis.de
+ingress:
+  host: sven.qentis.de
+  className: traefik
+service:
+  port: 3000
