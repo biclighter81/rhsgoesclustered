@@ -5,7 +5,7 @@ metadata:
 spec:
   namespace: argocd
   applicationRefs:
-    - namePattern:  MicheleApp
+    - namePattern:  envapp-michele
       images:
         - alias: "michele"
           imageName: "mgeorge.registry.qentis.de/applications/environment-app:1.0.x"
